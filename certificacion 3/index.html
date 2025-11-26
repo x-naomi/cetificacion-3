@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Batalla Musical</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+    <div class="header-logo">
+        <div class="logo">⚡ Batalla Musical ⚡</div>
+    </div>
+    <div class="header-nav">
+        <button class="login-btn">Iniciar Sesión - Registrarse</button>
+        <nav>
+            <a href="#">Géneros</a>
+            <a href="#">Batallas Pasadas</a>
+            <a href="#">Eventos</a>
+            <a href="#">Patrocinadores</a>
+            <a href="#">Inscripciones</a>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <section class="filtros">
+        <h3>Filtros</h3>
+
+        <p><strong>GÉNERO MUSICAL</strong></p>
+        <label><input type="checkbox"> Clásico</label>
+        <label><input type="checkbox"> Rock</label>
+        <label><input type="checkbox"> Jazz</label>
+        <label><input type="checkbox"> Pop</label>
+        <label><input type="checkbox"> Reggae</label>
+        <label><input type="checkbox"> Metal</label>
+        <label><input type="checkbox"> Hip Hop</label>
+
+        <p><strong>ÉPOCA</strong></p>
+        <label><input type="checkbox"> Años 70s</label>
+        <label><input type="checkbox"> Años 80s</label>
+        <label><input type="checkbox"> Años 90s</label>
+        <label><input type="checkbox"> Años 2000</label>
+        <label><input type="checkbox"> Años 2010</label>
+
+        <button id="btnFiltrar" onclick="filtrar()">Filtrar</button>
+    </section>
+
+    <section class="votaciones">
+        <h2>Votaciones</h2>
+
+        <div class="cancion">
+            <div class="imagen" style="background-image: url('https://i.scdn.co/image/ab67616d0000b273c92b57b8307e5999ec2fed69'); background-size: cover; background-position: center;"></div> <!-- Imagen de la cancion aqui, al igual que el titulo, artista y año -->
+            <p class="titulo">Strawberry Fields Forever</p>
+            <p class="artista">The Beatles</p>
+            <p class="year">1967</p>
+            <p id="votos1" class="votos">157</p>
+            <button onclick="votar(1)">Votar</button>
+        </div>
+
+        <div class="cancion">
+            <div class="imagen" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKGrYWnHfnWrS429UsJ8yieN3kw7zdkmVXuA&s'); background-size: cover; background-position: center;"></div>
+            <p class="titulo">Las Piedras Rodantes</p>
+            <p class="artista">The Rolling Stones</p>
+            <p class="year">1968</p>
+            <p id="votos2" class="votos">108</p>
+            <button onclick="votar(2)">Votar</button>
+        </div>
+    </section>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
